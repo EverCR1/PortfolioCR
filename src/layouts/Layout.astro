@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css"
+import '../styles/global.css';
 interface Props {
 	title: string;
 }
@@ -11,6 +11,21 @@ import { mainMenu } from '../components/data/menuData.js';
 <!doctype html>
 <html lang="es">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-B41TS1XKZC"
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-B41TS1XKZC');
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -23,11 +38,12 @@ import { mainMenu } from '../components/data/menuData.js';
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+		<script
+			src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+		></script>
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col">
-
-			<slot/>
+		<slot />
 	</body>
 </html>
